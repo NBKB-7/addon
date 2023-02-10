@@ -1,0 +1,11 @@
+{
+  "name": "lint2movie",
+  "description": "Open movie url without params, in YouTube.",
+  "version": "0.1.0",
+  "content_scripts":[{
+    "matches": ["https://www.youtube.com/*"],
+    "js": ["context_add.js"]
+  }],
+  "permissions": ["contextMenus", "tabs"],
+  "manifest_version": 3
+}
