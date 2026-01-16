@@ -1,17 +1,15 @@
-chrome.runtime.onInstalled.addListener(()=>{
+chrome.runtime.onInstalled.addListener(function(){
   chrome.contextMenus.create({
     id:"root",
     title:"add_on",
-    contexts:["link"],
     type:"normal"
   });
-
   chrome.contextMenus.create({
     parentId:"root",
     id:"link_unwrap",
     title:"リンクをリスト外として開く",
-    contexts: ["all"],
     type: "normal",
+    contexts:["link"]
   });
 });
 
